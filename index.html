@@ -146,6 +146,7 @@
                             <h3 class="name text-[72px] font-bold uppercase mb-[30px]">Abu Muslih A.</h3>
                             <h3 class="name text-[72px] font-bold uppercase mb-[30px]"></h3>
                             <span class="line inline-block w-[70px] h-[5px] bg-[#333] mb-[30px]"></span>
+                            
                             <h3 class="job text-[25px] mb-[35px] font-light">
                                 <span class="cd-headline clip">
                                     <span class="blc">Creative</span>
@@ -162,7 +163,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <div class="cavani_tm_section" id="about">
                     <div class="section_inner">
@@ -1591,7 +1591,9 @@
         <div
             class="cavani_tm_footer fixed inset-x-0 bottom-0 bg-white z-[10] h-[70px] leading-[70px] flex items-center justify-between py-0 px-[70px] middle:hidden">
             <div class="copyright">
-                <p class="text-[#333] font-poppins">Copyright &copy; 2023</p>
+                <p class="text-[#333] font-poppins">Copyright &copy; 2023 | <span class="font-semibold" id="tanggal"></span></p>
+                <!-- <p id="tanggal"></p> -->
+
             </div>
             <div class="social">
                 <ul>
@@ -1615,6 +1617,12 @@
 
     </div>
 
+    <script>
+        var date = new Date();
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var tanggal = date.toLocaleDateString('id-ID', options); // 'id-ID' untuk tampilan bahasa Indonesia
+        document.getElementById("tanggal").innerHTML = tanggal;
+    </script>
 
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/jquery.js"></script>
